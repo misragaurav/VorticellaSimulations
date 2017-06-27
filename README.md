@@ -1,10 +1,8 @@
 # VorticellaSimulations
-A video of the full simulation is available here: https://www.youtube.com/watch?v=lZbrAN-_Qck
+A video of the full simulation is available here: https://youtu.be/lZbrAN-_Qck
 
 Compiling the code:
-
 $ make all
-
 You can change the compiler in the Makefile. Please check the Makefile before compiling the code.
 
 Output of the code:
