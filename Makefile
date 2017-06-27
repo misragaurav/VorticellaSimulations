@@ -1,5 +1,5 @@
 # Choose compiler
-CC = icc
+CC = gcc
 
 # Optimization flags: cc is generic, gcc and icc are for PIII
 CFLAGS_gcc = -g -Wall -DHAVE_INLINE #Usually gcc is needed for debugging
