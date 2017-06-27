@@ -1,0 +1,90 @@
+/*  Element properties for a homogenous rod  */
+
+//#define checkpoint_resume // Turn on only if you need to resume from a checkpoint
+
+//#define real_float
+#define real double
+#define Pi   acos(-1.0)
+#define q_normalization
+#define exclude_ends
+
+/* Properties of undeformed rod */
+#define GAMMA0_1  0.0
+#define GAMMA0_2  0.0
+#define GAMMA0_3  1.0
+
+#define OMEGA0_1  0.0
+#define OMEGA0_2  0.0
+#define OMEGA0_3  0.0
+
+#define DIA      4.0
+#define HeadRad  3*DIA
+#define DENSITY  0.001  // volume density
+#define AREA     Pi*(DIA/2.0)*(DIA/2.0)
+#define MASS     DENSITY*AREA  //mass  per unit length
+#define INERTIA  (1.0/4.0)*AREA*(DIA/2.0)*(DIA/2.0) //moment of area
+
+//#define exvol
+#define cutoffD DIA
+#define lambda  DIA/10.0
+#define A 0.0006
+
+//#define Basset
+#define b0 0.4
+#define increasing_b
+
+//External Boundary Loads in SFF
+		       
+#define F0x   0.0      
+#define F0y   0.0    
+#define F0z   0.0    
+#define M0x   0.0     
+#define M0y   0.0      
+#define M0z   0.0      
+#define FLx   0.0      
+#define FLy   0.0
+#define FLz   0.0     
+#define MLx   0.0      
+#define MLy   0.0
+#define MLz   0.0
+
+// Boundary Loads in BFF
+		      
+#define F01   0.0      
+#define F02   0.0    
+#define F03   0.0      
+#define M01   0.0      
+#define M02   0.0      
+#define M03   0.0      
+#define FL1   0.0      
+#define FL2   0.0  
+#define FL3   0.0      
+#define ML1   0.0      
+#define ML2   0.0
+#define ML3   0.0
+
+// External uniform load (per unit length) in SFF
+#define Fx 0.0
+//#define Fy 0.0
+#define Fz 0.0
+#define Mx 0.0
+#define My 0.0
+#define Mz 0.0
+
+// Uniform load (per unit length) in BFF
+#define F1 0.0
+#define F2 0.0
+#define F3 0.0
+#define M1 0.0 // applying M in BFF causes issues in case of multisegmented rod
+#define M2 0.0
+#define M3 0.0
+
+/* Initial configuration */
+
+#define GAMMA_1   0.0
+#define GAMMA_2   0.0
+#define GAMMA_3   1.0
+
+#define OMEGA_1   0.0
+#define OMEGA_2   0.0 //(2.0*Pi)/(128*1) 
+#define OMEGA_3   0.0
